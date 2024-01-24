@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.求最大值函数
+    function getMax(a, b) {
+      return a > b? a : b
+    }
+    //let max = getMax(10, 20)
+    //console.log(getMax(10, 20))
+    //console.log(max)
+
+    //2.求任意数组的最大值，并返回
+    function getArrValue(arr = [] ){
+      // 先准备一个max变量存放数组的第一个值
+      let max = arr[0]
+      // 遍历比较
+      for (let i =1 ; i < arr.length ; i++) {
+        if(max < arr[i]) {
+          max = arr[i]
+        }
+      }
+      //返回值
+      return max
+    }
+    //let max = getArrValue([10,23,45,67,34,60])
+    //console.log(max)
+
+    //2.求任意数组的最大值，并返回
+    function getArr(arr = [] ){
+      // 先准备一个max变量存放数组的第一个值
+      let max = arr[0]
+      let min = arr[0]
+      // 遍历比较
+      for (let i =1 ; i < arr.length ; i++) {
+        //最大值
+        if(max < arr[i]) {
+          max = arr[i]
+        }
+        //最小值
+        if(min > arr[i]) {
+          min = arr[i]
+        }
+      }
+      //返回值
+      return [max, min]
+    }
+    let newArr = getArr([10,23,45,67,34,60])
+    console.log(newArr)
+  </script>
+</body>
+</html>
